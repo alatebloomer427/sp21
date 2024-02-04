@@ -72,7 +72,7 @@ public class IntListExercises {
         while (lst != null) {
             boolean currElemIsPrime = Primes.isPrime(lst.first);
             if (currElemIsPrime) {
-                if (changed == false) {
+                if (!changed) {
                     changed = true;
                 }
                 lst.first *= lst.first;
