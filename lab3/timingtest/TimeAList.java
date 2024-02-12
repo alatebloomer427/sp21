@@ -21,7 +21,34 @@ public class TimeAList {
         timeAListConstruction();
     }
 
+    /** returns the times of constructing ALists of different sizes using the given resize method. */
     public static void timeAListConstruction() {
         // TODO: YOUR CODE HERE
+        // create an empty AList for testing and three ALists to store the data to be tested
+        AList<Integer> list = new AList<>();
+        AList<Integer> Ns = new AList<>();
+        AList<Double> times = new AList<>();
+        AList<Integer> opCounts = new AList<>();
+
+        // double the size of the AList until it reaches 128000 and store each result into Ns
+        int tempSize = 1000;
+        while (tempSize <= 128000) {
+            Ns.addLast(tempSize);
+            opCounts.addLast(tempSize);
+            tempSize *= 2;
+        }
+
+        // for each size N, construct an AList by adding one item each time to the end of the list, until it reaches the target size N
+        // start timer before construction begins
+        // end timer
+        for (int i = 0; i < Ns.size(); i++) {
+            int N = Ns.get(i);
+            Stopwatch sw = new Stopwatch();
+            for (int j = 0; j < N; j++) {
+                list.addLast(j);
+            }
+            times.addLast(sw.elapsedTime());
+        }
+        printTimingTable(Ns, times, opCounts);
     }
 }
