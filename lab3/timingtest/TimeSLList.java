@@ -23,7 +23,7 @@ public class TimeSLList {
 
     public static void timeGetLast() {
         // TODO: YOUR CODE HERE
-        int M = 1000;
+        int opCount = 1000;
         AList<Integer> opCounts = new AList<>();
         AList<Integer> Ns = new AList<>();
         AList<Double> times = new AList<>();
@@ -37,7 +37,7 @@ public class TimeSLList {
         // create an SLList for each size of N
         for (int i = 0; i < Ns.size(); i++) {
             int N = Ns.get(i);
-            opCounts.addLast(M);
+            opCounts.addLast(opCount);
             SLList<Integer> list = new SLList<>();
 
             // add N items to the SLList
@@ -49,7 +49,7 @@ public class TimeSLList {
             Stopwatch sw = new Stopwatch();
 
             // perform opCounts getLast operations on the SLList
-            for (int k = 0; k < M; k++) {
+            for (int k = 0; k < opCount; k++) {
                 list.getLast();
             }
 
