@@ -32,7 +32,7 @@ public class TimeAList {
 
         // double the size of the AList until it reaches 128000 and store each result into Ns
         int tempSize = 1000;
-        while (tempSize <= 256000) {
+        while (tempSize <= 128000) {
             Ns.addLast(tempSize);
             opCounts.addLast(tempSize);
             tempSize *= 2;

@@ -29,7 +29,7 @@ public class TimeSLList {
         AList<Double> times = new AList<>();
 
         int tempSize = 1000;
-        while (tempSize <= 256000) {
+        while (tempSize <= 128000) {
             Ns.addLast(tempSize);
             tempSize *= 2;
         }
