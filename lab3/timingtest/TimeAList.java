@@ -25,7 +25,7 @@ public class TimeAList {
     public static void timeAListConstruction() {
         // TODO: YOUR CODE HERE
         // create an empty AList for testing and three ALists to store the data to be tested
-        AList<Integer> list = new AList<>();
+
         AList<Integer> Ns = new AList<>();
         AList<Double> times = new AList<>();
         AList<Integer> opCounts = new AList<>();
@@ -43,6 +43,7 @@ public class TimeAList {
         // end timer
         for (int i = 0; i < Ns.size(); i++) {
             int N = Ns.get(i);
+            AList<Integer> list = new AList<>();
             Stopwatch sw = new Stopwatch();
             for (int j = 0; j < N; j++) {
                 list.addLast(j);
